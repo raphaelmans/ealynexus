@@ -23,7 +23,9 @@ class AuthService{
             throw new ErrorResponse('User does not exist',400) 
         }
 
-        const isPasswordValid = user.matchPassword(password);
+        const isPasswordValid = await user.matchPassword(password);
+
+        console.log(isPasswordValid)
 
         if(!isPasswordValid){
             throw new ErrorResponse('Invalid credentials',401);

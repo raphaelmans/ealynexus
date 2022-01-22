@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get('/getAllUsers',asyncHandler(user.getAllUsers));
 router.get('/getUserByEmail',asyncHandler(user.getUserByEmail));
+router.get('/getUserById',asyncHandler(user.getUserById));
 
 
 

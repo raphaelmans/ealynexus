@@ -5,6 +5,10 @@ class UserService {
         return await userRepository.getUserByEmail(email);
     }
 
+    async getUserById(id){
+        return await userRepository.getUserById(id);
+    }
+
     async getAllUsers(){
         return await userRepository.getAllUsers();
     }

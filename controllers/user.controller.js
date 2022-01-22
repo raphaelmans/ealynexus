@@ -24,6 +24,18 @@ const userController = {
         })
     },
 
+    getUserById: async (req, res, next) => {
+        const {
+            id
+        } = req.body;
+        const user = await userService.getUserById(id);
+
+        res.status(200).json({
+            success: true,
+            data: user,
+        })
+    },
+
 };
 
 module.exports = userController;

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:start": "nodemon index.js"
+    "dev:start": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "play-to-earn",
@@ -21,12 +22,14 @@
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.1.5",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   }
 }
