@@ -1,0 +1,117 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li{
+  margin-bottom: 0.5rem;
+}
+
+.add-status {
+  height: 420px;
+}
+
+.active-status{
+  color: #00C2FF;
+  border-left: 3px solid #00C2FF;
+}
+
+.ealy-btn {
+  padding: 8px 24px;
+  border-radius: 25px;
+}
+
+.white-btn{
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.bluesh-btn{
+  background-color: #00C2FF;
+  border: 0;
+  color: #fff;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+input{
+  background-color: rgb(0, 0, 0,0.5);
+  border: 0;
+  color: #fff;
+  padding: 8px;
+}
+
+.budget-input{
+  height: 2rem;
+  width: 200px;
+  padding: 4px 10px !important;
+}
+
+.deposit-container{
+  background-color: rgb(0, 0, 0,0.5);
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.review-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-btn{
+  background-color: #8F00FF;
+  border: 0;
+  color: #fff;
+}
+.review-item{
+  p{
+    font-weight: bold;
+  }
+  span,small{
+    margin-left: 1.2rem;
+    font-size: 14px;
+  }
+  margin-bottom: 1em;
+  .review-budget{
+    font-size: 24px;
+  }
+}
+
+.deposit-fee {
+
+}
+
+
+.payment-type-btn{
+  color: #fff;
+  border: 1px solid #00C2FF;
+}
+
+
+.dropdown-menu{
+  background-color: rgb(0, 0, 0,0.5);
+}
+
+.dropdown-item{
+  color: #fff;
+}
+
+.dropdown-item:hover{
+  color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

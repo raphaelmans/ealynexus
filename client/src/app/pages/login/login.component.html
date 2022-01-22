@@ -1,0 +1,33 @@
+<div id="login-container">
+  <div class="d-flex justify-content-center align-items-center flex-column h-100">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-6 d-flex justify-content-center">
+          <h1 class="text-white">EALYNexus</h1>
+        </div>
+        <div class="col-6">
+          <app-ealy-card>
+            <div class="p-5 d-flex justify-content-center align-items-center flex-column">
+              <h3 class="text-white mb-3">Welcome</h3>
+              <div class="alert alert-danger" role="alert" *ngIf="err">
+                {{err}}
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" name="" id="" class="form-control ealy-input" placeholder="Email" [(ngModel)]="email">
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" name="" id="" class="form-control ealy-input" placeholder="Password" [(ngModel)]="password">
+              </div>
+              <button class="ealy-button mb-3" (click)="login()">
+                Log in
+              </button>
+              <span class="text-white">Don't have an account? <a routerLink="/register">Register</a></span>
+
+            </div>
+          </app-ealy-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+.ealy-input {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  color: #fff;
+}
+.ealy-input:focus {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  color: #fff;
+}
+
+.ealy-button{
+  padding: 10px 24px;
+  background: linear-gradient(180deg, #00C2FF 0%, #8F00FF 100%);
+  border-radius: 40px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+.ealy-card{
+  background-color: rgb(0, 76, 153,0.2);
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 4px 24px -1px #00000033;
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+
+
+}
+
+
+hr{
+  border-color: #fff !important;
+}
+
+
+textarea{
+  background-color: rgb(0, 0, 0,0.5);
+  border: 0;
+  color: #fff;
+  padding: 1rem;
+}

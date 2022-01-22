@@ -1,0 +1,37 @@
+<div id="register-container">
+  <div class="d-flex justify-content-center align-items-center flex-column h-100">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center flex-column">
+        <app-ealy-card>
+          <div class="p-5 d-flex justify-content-center align-items-center flex-column">
+            <h3 class="text-white mb-3">Sign Up</h3>
+            <div class="alert alert-danger" role="alert" *ngIf="err">
+              {{err}}
+            </div>
+            <div class="input-group mb-3">
+              <input type="text"  class="form-control ealy-input" placeholder="Email" [(ngModel)]="email">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text"  class="form-control ealy-input" placeholder="First name" [(ngModel)]="firstName">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control ealy-input" placeholder="Last name" [(ngModel)]="lastName">
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control ealy-input" placeholder="Password" [(ngModel)]="password">
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control ealy-input" placeholder="Confirm Password" [(ngModel)]="confirmPassword">
+            </div>
+            <button class="ealy-button mb-3" (click)="register()">
+              Register
+            </button>
+
+            <span class="text-white">Already have an account? <a routerLink="/login">Login</a></span>
+          </div>
+        </app-ealy-card>
+      </div>
+    </div>
+  </div>
+
+</div>

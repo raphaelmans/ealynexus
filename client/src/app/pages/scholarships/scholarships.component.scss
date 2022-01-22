@@ -1,0 +1,38 @@
+#scholarships-container{
+  background-color: #001933;
+  min-height: 100vh;
+}
+
+
+.add{
+  background-color: transparent;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.add:hover{
+  text-decoration: none;
+  color: #00C2FF;
+  border: 1px solid #00C2FF ;
+}
+
+
+.selected{
+  background-color: #4C6DA0;
+}
+
+
+
+.ealy-btn {
+  padding: 8px 24px;
+  border-radius: 25px;
+}
+
+.bluesh-btn{
+  background-color: #00C2FF;
+  border: 0;
+  color: #fff;
+}

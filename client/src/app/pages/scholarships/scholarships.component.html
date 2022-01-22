@@ -1,0 +1,63 @@
+<app-base-layout>
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-6">
+        <app-ealy-card>
+          <div class="d-flex flex-column" style="max-height: 540px;overflow-y:auto">
+            <div class="d-flex p-3 align-items-center justify-content-between w-100">
+              <h6 class="text-white">
+                Scholarships
+              </h6>
+              <a class="add" routerLink="/addScholarship">
+                Add Scholarship
+              </a>
+
+            </div>
+            <ng-container *ngFor="let item of scholarships; let index=index">
+              <div class="p-3 d-flex" [class.selected]="index===selected" (click)="selectScholarship(index)"
+                style="cursor: pointer;">
+                <img src="/assets/images/square-placeholder.jpg" alt="" srcset="" style="height: 75px; width:75px"
+                  class="mr-2">
+                <div class="d-flex flex-column text-white">
+                  <span>{{item.title.length > 25 ? item.title.substring(0,25) +"..." : item.title}}</span>
+                  <p><small>{{ item.description.length > 50 ? item.description.substring(0,50)+"..." :
+                      item.description}}</small></p>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+
+        </app-ealy-card>
+      </div>
+      <div class="col-6">
+        <app-ealy-card>
+          <div class="p-3 text-white" style="overflow:auto" *ngIf="scholarships.length > 0">
+            <h5>{{scholarship.title}}</h5>
+            <p>{{scholarship.description}}</p>
+            <br>
+            <small>Payment Type: {{scholarship.payment_type}}</small>
+            <br>
+            <small>Budget: {{scholarship.budget}} {{scholarship.supported_token}}</small>
+            <br>
+            <br>
+
+            <div class="d-flex">
+              <div style="height:50px;width:50px;background-color:gray" class="rounded-circle mr-2">
+              </div>
+              <span>{{scholarship.manager.firstName}} {{scholarship.manager.lastName}}</span>
+            </div>
+            <br>
+            <br>
+            <div class="d-flex flex-row-reverse">
+              <button class="ealy-btn bluesh-btn">Apply</button>
+            </div>
+
+          </div>
+
+
+
+        </app-ealy-card>
+      </div>
+    </div>
+  </div>
+</app-base-layout>

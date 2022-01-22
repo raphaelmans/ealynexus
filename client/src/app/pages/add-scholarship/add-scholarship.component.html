@@ -1,0 +1,121 @@
+<app-base-layout>
+  <div class="d-flex justify-content-center align-items-center flex-column h-100">
+    <div class="container pt-3 h-100 w-100">
+      <h1 class="text-white">Add Scholarship</h1>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="add-status ealy-card text-white">
+            <ul class="py-3">
+              <li [class.active-status]="progress===1">&nbsp;&nbsp;&nbsp;&nbsp;Title</li>
+              <li [class.active-status]="progress===2">&nbsp;&nbsp;&nbsp;&nbsp;Description</li>
+              <li [class.active-status]="progress===3">&nbsp;&nbsp;&nbsp;&nbsp;Details</li>
+              <li [class.active-status]="progress===4">&nbsp;&nbsp;&nbsp;&nbsp;Budget</li>
+              <li [class.active-status]="progress===5">&nbsp;&nbsp;&nbsp;&nbsp;Review</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-9">
+
+
+
+          <div class="ealy-card text-white w-100">
+            <div class="title" *ngIf="progress==1">
+              <h5 class="px-3 pt-2">Title</h5>
+              <hr>
+              <div class="p-3">
+                <p>Your scholarship title</p>
+                <input type="text" name="" id="" [(ngModel)]="title" placeholder="Title">
+              </div>
+            </div>
+            <div class="description" *ngIf="progress==2">
+              <h5 class="px-3 pt-2">Description</h5>
+              <hr>
+              <div class="p-3">
+                <p>Write the description</p>
+                <textarea class="w-100" rows="10" [(ngModel)]="description"></textarea>
+              </div>
+            </div>
+            <div class="details" *ngIf="progress==3">
+              <h5 class="px-3 pt-2">Details</h5>
+              <hr>
+              <div class="p-3">
+                <p>Payment Type</p>
+                  <div ngbDropdown class="d-inline-block">
+                    <button class="btn payment-type-btn" id="dropdownBasic1" ngbDropdownToggle>
+                      {{paymentType}}
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem (click)="onPaymentTypeSelect(p_types.FIXEDPAY)">{{paymentTypes[0]}}</button>
+                      <button ngbDropdownItem (click)="onPaymentTypeSelect(p_types.PAYPERHOUR)">{{paymentTypes[1]}}</button>
+                      <button ngbDropdownItem (click)="onPaymentTypeSelect(p_types.PAYPERWIN)">{{paymentTypes[2]}}</button>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="budget" *ngIf="progress==4">
+              <h5 class="px-3 pt-2">Budget</h5>
+              <hr>
+              <div class="p-3">
+                <p>Your budget</p>
+                <input type="number" name="" id="" class="budget-input" style="text-align: right;" [(ngModel)]="budget">
+                <br>
+                <br>
+                <p>Deposit <em>50%</em></p>
+                <div class="budget-input deposit-container">
+                  <span>SLP</span>
+                  <span>{{budget > 0 ? budget/2 : 0}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="review" *ngIf="progress==5">
+
+              <div class="px-3 pt-2 review-container">
+                <h5>Review and Post</h5>
+              </div>
+              <hr>
+              <div class="p-3">
+                <div class="review-item">
+                  <p>Title</p>
+                    <span>{{title}}</span>
+                </div>
+                <div class="review-item">
+                  <p>Description</p>
+                  <span>{{description}}</span>
+                </div>
+
+                <div class="review-item">
+                  <p>Payment Type</p>
+                  <span>{{paymentType}}</span>
+                </div>
+
+                <div class="review-item">
+                  <p>Budget</p>
+                  <span class="review-budget">{{budget}} SLP</span>
+                  <br><br>
+                  <small><i>Down payment: {{budget/2}} SLP (50%)</i></small>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="btn-group mb-3 mr-3">
+              <button class="ealy-btn white-btn mr-2" *ngIf="progress !== 1"
+              (click)="backProgress()">
+                Back
+              </button>
+              <button class="ealy-btn bluesh-btn" *ngIf="progress !=maxProgress" (click)="nextProgress()">
+                Next
+              </button>
+              <button class="ealy-btn post-btn"
+              (click)="postScholarship()"
+              *ngIf="progress == maxProgress">Post</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</app-base-layout>
